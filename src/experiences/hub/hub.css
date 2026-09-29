@@ -1,0 +1,435 @@
+.hub-site {
+  background: #111a1d;
+  color: #eee8df;
+  --focus: #7dc8d2;
+  --selection: #7dc8d2;
+  color-scheme: dark;
+}
+.hub-shell {
+  max-width: 1440px;
+  padding: 0 64px;
+  margin: auto;
+}
+.hub-header {
+  flex-wrap: wrap;
+  min-height: 108px;
+  border-bottom: 1px solid #304248;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.hub-wordmark {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.07em;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.hub-wordmark > span:first-child {
+  color: #8cafb7;
+  font-weight: 400;
+}
+.hub-mark {
+  color: #d7a185;
+  font-size: 1.6rem;
+  margin-left: 14px;
+}
+.hub-header nav {
+  display: flex;
+  gap: 2rem;
+  font-size: 0.875rem;
+}
+.hub-header nav a {
+  text-decoration: none;
+  color: #afc0c3;
+}
+.hub-header nav a[aria-current],
+.hub-header nav a:hover {
+  color: #eee8df;
+}
+.hub-eyebrow {
+  font: 0.75rem/1.6 var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #a9c0c5;
+}
+.hub-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #7dc8d2;
+  margin: 0 9px 2px 0;
+}
+.hub-hero {
+  padding: 76px 0 54px;
+}
+.hub-hero h1 {
+  font-size: clamp(4rem, 8.6vw, 8.7rem);
+  letter-spacing: -0.075em;
+  font-weight: 450;
+  margin: 30px 0 35px;
+  line-height: 1.05;
+}
+.hub-hero h1 em {
+  font-family: var(--serif);
+  color: #86c7d0;
+  font-weight: 400;
+  letter-spacing: -0.055em;
+}
+.hub-hero-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.hub-hero-bottom > p {
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  letter-spacing: -0.03em;
+  line-height: 1.4;
+}
+.hub-margin-note {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #a9b6b7;
+  border-left: 1px solid #395057;
+  padding-left: 20px;
+}
+.hub-explore {
+  margin-top: 38px;
+  display: inline-flex;
+  gap: 22px;
+  text-decoration: none;
+  color: #a9b6b7;
+  font: 0.75rem/2 var(--mono);
+}
+.hub-paths {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+.hub-path {
+  min-width: 0;
+  padding: 27px;
+  min-height: 365px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition:
+    transform 0.2s,
+    border-color 0.2s;
+}
+.hub-path:hover {
+  transform: translateY(-5px);
+  border-color: #8cafb7;
+}
+.hub-path-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  font: 0.75rem var(--mono);
+}
+.hub-path-top > span:last-child {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+.hub-path h2 {
+  margin: 36px 0 45px;
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  font-weight: 500;
+  letter-spacing: -0.05em;
+}
+.hub-path h2 em {
+  font-family: var(--serif);
+  font-weight: 400;
+}
+.hub-path-bottom {
+  margin-top: auto;
+}
+.hub-path-bottom p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+.hub-path-bottom > span {
+  display: block;
+  margin-top: 22px;
+  font-size: 0.8rem;
+}
+.hub-path-bottom > span > span {
+  float: right;
+}
+.hub-book {
+  background: #281b21;
+  color: #e5c8bc;
+}
+.hub-book h2 {
+  font-family: var(--serif);
+  font-size: clamp(2.5rem, 3.5vw, 3.8rem);
+}
+.hub-code {
+  background: #bed4d3;
+  color: #142a2c;
+}
+.hub-code h2 span {
+  font-family: var(--mono);
+  font-size: 0.63em;
+  letter-spacing: -0.05em;
+}
+.hub-voice {
+  background: #e4d6c8;
+  color: #3d2824;
+}
+.hub-note {
+  padding: 90px 0;
+  max-width: 850px;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 24px 50px;
+}
+.hub-note p {
+  font-size: clamp(1.5rem, 2.6vw, 2.2rem);
+  letter-spacing: -0.03em;
+  line-height: 1.4;
+}
+.hub-note p em {
+  font-family: var(--serif);
+  color: #adc4c6;
+}
+.hub-note a {
+  grid-column: 2;
+  font-size: 0.9rem;
+  color: #7dc8d2;
+  width: fit-content;
+}
+.hub-footer {
+  border-top: 1px solid #304248;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 27px 0;
+  font-size: 0.75rem;
+  color: #a4b3b6;
+}
+.hub-footer > span > span {
+  margin: 0 10px;
+  color: #53727b;
+}
+.hub-about-title {
+  padding: 75px 0 45px;
+}
+.hub-about-title h1 {
+  font-size: clamp(3.8rem, 7vw, 6rem);
+  margin-top: 20px;
+  letter-spacing: -0.06em;
+  font-weight: 450;
+}
+.hub-about-title em {
+  color: #7dc8d2;
+  font-family: var(--serif);
+  font-weight: 400;
+}
+.hub-site .biography {
+  display: grid;
+  grid-template-columns: minmax(230px, 360px) minmax(0, 660px);
+  gap: 80px;
+  margin-bottom: 100px;
+}
+.hub-site .bio-portrait img {
+  border: 1px solid #36505a;
+  padding: 10px;
+}
+.hub-site .bio-portrait figcaption {
+  color: #a9b6b7;
+  font-family: var(--mono);
+}
+.hub-site .bio-introduction {
+  font-family: var(--serif);
+  font-size: 2rem;
+  color: #d4e7e8;
+}
+.hub-site .bio-copy p:not(:first-child) {
+  color: #b0bfc1;
+}
+.footer-detail {
+  border: 0;
+  background: none;
+  color: #bd9580;
+  min-width: 44px;
+  min-height: 44px;
+  font-size: 1.3rem;
+}
+.necromancy-dialog {
+  border: 1px solid #48616b;
+  background: #172429;
+  color: #eee8df;
+  width: min(760px, calc(100% - 32px));
+  max-height: 90dvh;
+  padding: 32px;
+}
+.necromancy-dialog::backdrop {
+  background: #030d10dd;
+  backdrop-filter: blur(6px);
+}
+.dialog-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.dialog-heading .eyebrow {
+  color: #b6c8cc;
+  font: 0.75rem var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.dialog-dismiss {
+  border: 0;
+  background: none;
+  color: #eee8df;
+  font-size: 2rem;
+  width: 44px;
+  height: 44px;
+}
+.necromancy-dialog h2 {
+  font: italic clamp(2rem, 5vw, 3rem)/1.05 var(--serif);
+  margin-bottom: 20px;
+}
+.necromancy-dialog p {
+  color: #bbcacd;
+  font-size: 0.95rem;
+}
+.video-figure {
+  margin: 24px 0 12px;
+}
+.video-frame {
+  aspect-ratio: 16/9;
+  background: #0d1518;
+}
+.video-frame iframe {
+  border: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.video-figure figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 0.75rem;
+  margin-top: 10px;
+}
+.video-figure figcaption > span {
+  max-width: 65%;
+}
+.necromancy-dialog .secret-credit {
+  font-size: 0.75rem;
+}
+.dialog-links {
+  margin-top: 20px;
+}
+.dialog-links button {
+  background: none;
+  border: 1px solid #65848e;
+  color: #d8e8eb;
+  padding: 10px 20px;
+}
+@media (max-width: 1000px) {
+  .hub-shell {
+    padding: 0 32px;
+  }
+  .hub-path {
+    padding: 22px;
+  }
+  .hub-site .biography {
+    gap: 40px;
+  }
+}
+@media (max-width: 700px) {
+  .hub-shell {
+    padding: 0 24px;
+  }
+  .hub-header {
+    min-height: 85px;
+    gap: 12px;
+  }
+  .hub-header nav {
+    gap: 18px;
+  }
+  .hub-wordmark {
+    font-size: 1.3rem;
+  }
+  .hub-hero {
+    padding: 50px 0 40px;
+  }
+  .hub-hero h1 {
+    font-size: clamp(3.6rem, 13vw, 5.5rem);
+    margin: 25px 0;
+  }
+  .hub-hero-bottom {
+    display: block;
+  }
+  .hub-margin-note {
+    display: block;
+    margin-top: 25px;
+    font-size: 1.1rem;
+  }
+  .hub-paths {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .hub-path {
+    min-height: 315px;
+    padding: 26px;
+  }
+  .hub-path h2 {
+    font-size: 2.8rem;
+    margin: 25px 0;
+  }
+  .hub-book h2 {
+    font-size: 3.5rem;
+  }
+  .hub-note {
+    grid-template-columns: 1fr;
+    padding: 60px 0;
+    gap: 25px;
+  }
+  .hub-note a {
+    grid-column: auto;
+  }
+  .hub-footer {
+    flex-wrap: wrap;
+  }
+  .hub-footer > span:first-child {
+    flex: 1 1 75%;
+  }
+  .hub-footer > span:last-child {
+    display: none;
+  }
+  .hub-site .biography {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    margin-bottom: 60px;
+  }
+  .hub-site .bio-portrait {
+    max-width: 360px;
+  }
+  .hub-about-title {
+    padding: 45px 0 30px;
+  }
+  .necromancy-dialog {
+    padding: 20px;
+  }
+  .video-figure figcaption {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .video-figure figcaption > span {
+    max-width: none;
+  }
+}

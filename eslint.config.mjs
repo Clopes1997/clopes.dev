@@ -5,12 +5,17 @@ import nextTs from "eslint-config-next/typescript";
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
+  // Document navigation is intentional between independently rooted microsites.
+  { rules: { "@next/next/no-html-link-for-pages": "off" } },
   // Override default ignores of eslint-config-next.
   globalIgnores([
     // Default ignores of eslint-config-next:
     ".next/**",
     "out/**",
     "build/**",
+    "test-results/**",
+    "playwright-report/**",
+    ".sites-runtime/**",
     "next-env.d.ts",
   ]),
 ]);

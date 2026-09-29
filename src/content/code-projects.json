@@ -1,0 +1,67 @@
+[
+  {
+    "fullName": "Clopes1997/fleet-operations",
+    "displayName": "Fleet Operations",
+    "description": "Vehicles, customers and service orders.",
+    "liveUrl": "https://clopes1997.github.io/fleet-operations/",
+    "deploymentStatus": "Preview",
+    "caveats": "Read-only fictional fixtures; writes and real integrations require the existing backend.",
+    "repositoryId": 1387252759
+  },
+  {
+    "fullName": "Clopes1997/inventory-platform",
+    "displayName": "Inventory Platform",
+    "description": "Product catalog, stock, materials and production feasibility.",
+    "liveUrl": "https://clopes1997.github.io/inventory-platform/",
+    "deploymentStatus": "Preview",
+    "caveats": "Read-only fictional fixtures; writes and real integrations require the existing backend.",
+    "repositoryId": 1387251729
+  },
+  {
+    "fullName": "Clopes1997/personal-operations",
+    "displayName": "Personal Operations",
+    "description": "Browser-local tasks, schedules, time tracking and budgets.",
+    "liveUrl": "https://clopes1997.github.io/personal-operations/",
+    "deploymentStatus": "Live",
+    "caveats": "Data stays in this browser and origin; no cloud sync. Clearing browser storage deletes it.",
+    "repositoryId": 1387252473
+  },
+  {
+    "fullName": "Clopes1997/product-hunt",
+    "displayName": "Product Hunt",
+    "description": "A lightweight deployed Product Hunt-style project.",
+    "liveUrl": "https://clopes1997.github.io/product-hunt/",
+    "deploymentStatus": "Live",
+    "caveats": "Static public demo.",
+    "repositoryId": 987346824
+  },
+  {
+    "fullName": "Clopes1997/segura",
+    "displayName": "Segura",
+    "description": "Working recreation of the Segura landing page.",
+    "deploymentStatus": "Live",
+    "caveats": "Hosted separately on Vercel.",
+    "repositoryId": 1166080863
+  },
+  {
+    "fullName": "Clopes1997/Timeline",
+    "description": "A timeline planning interface for date-based work. Move, resize, search, and edit items, with zoom and automatic lane assignment.",
+    "technologies": ["React", "TypeScript"]
+  },
+  {
+    "fullName": "Clopes1997/autoflex",
+    "description": "A manufacturing inventory application for products, raw materials, and recipes, with production feasibility calculated for each product.",
+    "technologies": ["Java", "Quarkus", "React", "MySQL"],
+    "repositoryId": 1171988243
+  },
+  {
+    "fullName": "Clopes1997/life-rpg",
+    "description": "A productivity dashboard that turns a schedule into quests, progress, and rewards. Data stays in the browser, with JSON import and export.",
+    "technologies": ["React", "TypeScript", "Zustand", "IndexedDB"]
+  },
+  {
+    "fullName": "Clopes1997/timebank",
+    "description": "A time-bank calculator for working hours, balances, and ideal departure times. Paste recorded times from text and keep them between visits.",
+    "technologies": ["React", "TypeScript"]
+  }
+]

@@ -1,0 +1,293 @@
+.book-site {
+  background: #21171c;
+  color: #ebd8ca;
+  --focus: #d8ae8b;
+  --selection: #d8ae8b;
+  color-scheme: dark;
+}
+.book-shell {
+  max-width: 1360px;
+  padding: 0 70px;
+  margin: auto;
+}
+.book-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  min-height: 108px;
+  border-bottom: 1px solid #493139;
+}
+.book-wordmark {
+  font: 1.55rem var(--serif);
+  text-decoration: none;
+}
+.book-header nav {
+  display: flex;
+  gap: 30px;
+  font-size: 0.875rem;
+}
+.book-header nav a {
+  text-decoration: none;
+  color: #c4aba7;
+}
+.book-header nav a[aria-current],
+.book-header nav a:hover {
+  color: #f0ddd0;
+  text-decoration: underline;
+}
+.book-opening {
+  text-align: center;
+  padding: 70px 20px 30px;
+  position: relative;
+}
+.book-kicker,
+.book-section-label {
+  font: 0.75rem/1.8 var(--sans);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #c49f92;
+}
+.book-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  color: #b98971;
+  margin: 36px 0;
+  font-size: 0.8rem;
+}
+.book-ornament span {
+  width: 95px;
+  height: 1px;
+  background: #765047;
+}
+.book-opening h1 {
+  font: clamp(4.5rem, 10.5vw, 9.3rem)/0.95 var(--serif);
+  letter-spacing: -0.055em;
+}
+.book-opening h1 em {
+  font-weight: 400;
+  color: #cb9c8e;
+}
+.book-status {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: #c7aea6;
+  margin: 34px 0 25px;
+}
+.book-scroll {
+  display: inline-flex;
+  width: 44px;
+  height: 54px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #c49f92;
+}
+.book-manuscript {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 600px);
+  justify-content: center;
+  gap: 70px;
+  border-top: 1px solid #493139;
+  padding: 65px 0 85px;
+  margin-top: 22px;
+}
+.book-manuscript h2 {
+  font: 2.65rem/1.12 var(--serif);
+  letter-spacing: -0.025em;
+  margin-bottom: 28px;
+}
+.book-manuscript h2 em {
+  color: #c49f92;
+  font-weight: 400;
+}
+.book-manuscript p {
+  color: #d2bcb4;
+  max-width: 530px;
+  font-size: 1.05rem;
+}
+.book-manuscript .book-promise {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.3rem;
+  margin-top: 22px;
+}
+.book-author {
+  text-align: center;
+  border-top: 1px solid #493139;
+  padding: 65px 0;
+}
+.book-author h2 {
+  font: 2.7rem var(--serif);
+  margin: 15px 0 25px;
+}
+.book-author h2 em {
+  font-weight: 400;
+}
+.book-author a {
+  font-size: 0.875rem;
+}
+.book-author a span {
+  margin-left: 16px;
+}
+.book-footer {
+  border-top: 1px solid #493139;
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  color: #bda29a;
+  font-size: 0.8rem;
+}
+.book-footer i {
+  margin: 0 12px;
+  color: #a67c67;
+}
+.book-footer a {
+  text-decoration: none;
+  font-family: var(--sans);
+}
+.book-reading {
+  max-width: 680px;
+  margin: 0 auto 80px;
+}
+.book-reading h2 {
+  font: 3rem var(--serif);
+  margin-bottom: 28px;
+}
+.book-reading p,
+.book-excerpt {
+  font: 1.3rem/1.8 var(--serif);
+  white-space: pre-line;
+}
+.book-reading article {
+  padding: 25px 0;
+  border-bottom: 1px solid #493139;
+}
+.book-reading h3 {
+  font: 1.8rem var(--serif);
+  margin: 20px 0;
+}
+.book-cover {
+  max-width: 420px;
+  margin: 0 auto 70px;
+}
+.book-about-heading {
+  text-align: center;
+  padding: 60px 0 50px;
+}
+.book-about-heading h1 {
+  font: clamp(3.5rem, 6vw, 5.5rem) var(--serif);
+  margin-top: 20px;
+}
+.book-about-heading h1 em {
+  font-weight: 400;
+  color: #cb9c8e;
+}
+.book-site .biography {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 570px);
+  gap: 70px;
+  justify-content: center;
+  margin: 0 0 90px;
+}
+.book-site .bio-portrait {
+  padding-top: 8px;
+}
+.book-site .bio-portrait img {
+  padding: 10px;
+  border: 1px solid #80604d;
+}
+.book-site .bio-portrait figcaption {
+  text-align: center;
+  font: italic 1.2rem var(--serif);
+  color: #c49f92;
+  margin-top: 18px;
+}
+.book-site .bio-copy {
+  font: 1.23rem/1.65 var(--serif);
+  color: #d7c0b7;
+}
+.book-site .bio-introduction {
+  color: #f0ddcd;
+  font-size: 1.85rem;
+}
+@media (max-width: 900px) {
+  .book-shell {
+    padding: 0 35px;
+  }
+  .book-manuscript {
+    gap: 35px;
+    grid-template-columns: 180px 1fr;
+  }
+  .book-site .biography {
+    gap: 40px;
+    grid-template-columns: 240px 1fr;
+  }
+}
+@media (max-width: 650px) {
+  .book-shell {
+    padding: 0 24px;
+  }
+  .book-header {
+    min-height: 100px;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding: 20px 0 12px;
+  }
+  .book-wordmark {
+    font-size: 1.4rem;
+    flex-basis: 100%;
+  }
+  .book-header nav {
+    gap: 26px;
+  }
+  .book-opening {
+    padding: 45px 0 20px;
+  }
+  .book-opening h1 {
+    font-size: clamp(3.55rem, 13vw, 5.8rem);
+  }
+  .book-kicker {
+    letter-spacing: 0.14em;
+  }
+  .book-ornament {
+    margin: 28px 0;
+  }
+  .book-status {
+    margin-top: 30px;
+  }
+  .book-manuscript {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 40px 0 55px;
+  }
+  .book-manuscript h2 {
+    font-size: 2.3rem;
+  }
+  .book-author {
+    padding: 45px 0;
+  }
+  .book-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+  .book-site .biography {
+    grid-template-columns: 1fr;
+    margin-bottom: 60px;
+  }
+  .book-site .bio-portrait {
+    max-width: 300px;
+    margin: auto;
+  }
+  .book-site .bio-copy {
+    font-size: 1.2rem;
+  }
+  .book-about-heading {
+    padding: 40px 0 30px;
+  }
+}
