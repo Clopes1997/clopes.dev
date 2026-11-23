@@ -3,10 +3,85 @@ import { sitePath } from "@/lib/site-path";
 import { useRef } from "react";
 import { voiceCopy, voiceMaterial } from "@/content/voice";
 import type { Locale } from "@/content/biography";
+
+const brazilianVideoSamples = [
+  {
+    title: "The Social Network",
+    driveId: "17WiVmPAhZOxw8bMb6rRpu-EYMQcwRtrP",
+  },
+  {
+    title: "Gato de Botas",
+    driveId: "1EDglGlJkU0aAC_zTURU9gSkDiaX9YOJd",
+  },
+  { title: "Mulan", driveId: "1BiaxDO60JhaRTmpYUq1ajB5nw3CIJRAF" },
+];
+const brazilianDemoReel = "/audio/voice-demo-reel-pt-br.wav";
+
+function BrazilianVoicePortfolio({ audioFallback }: { audioFallback: string }) {
+  return (
+    <div className="voice-portfolio">
+      <div className="voice-portfolio-heading">
+        <h3>Trabalhos de dublagem</h3>
+        <p>Trechos de personagens em português brasileiro.</p>
+      </div>
+      <div className="voice-video-grid">
+        {brazilianVideoSamples.map((sample, index) => (
+          <article className="voice-work-sample" key={sample.driveId}>
+            <div className="voice-work-meta">
+              <span>{String(index + 1).padStart(2, "0")} / Dublagem</span>
+            </div>
+            <h3>{sample.title}</h3>
+            <div className="voice-video-frame">
+              <iframe
+                src={`https://drive.google.com/file/d/${sample.driveId}/preview`}
+                title={`Trecho de dublagem de ${sample.title}`}
+                loading="lazy"
+                allow="autoplay"
+                allowFullScreen
+                referrerPolicy="strict-origin-when-cross-origin"
+              />
+            </div>
+            <a
+              className="voice-drive-link"
+              href={`https://drive.google.com/file/d/${sample.driveId}/view?usp=sharing`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Abrir no Google Drive <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+        ))}
+      </div>
+      <article className="voice-demo-reel">
+        <div>
+          <span className="voice-label">Demonstração em áudio</span>
+          <h3 id="pt-br-demo-reel-title">Demo reel — português brasileiro</h3>
+          <p>Uma seleção de vozes e interpretações em português brasileiro.</p>
+        </div>
+        <div className="voice-demo-reel-player">
+          <audio
+            controls
+            preload="none"
+            aria-labelledby="pt-br-demo-reel-title"
+          >
+            <source src={sitePath(brazilianDemoReel)} type="audio/wav" />
+            {audioFallback}
+          </audio>
+          <a href={sitePath(brazilianDemoReel)} download>
+            Baixar demo reel <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+      </article>
+    </div>
+  );
+}
+
 /** Native accessible playback, one sample at a time; nothing fabricated for empty data. */
 export default function VoiceSamples({ locale }: { locale: Locale }) {
   const active = useRef<HTMLAudioElement | null>(null);
   const copy = voiceCopy[locale];
+  if (locale === "pt-BR")
+    return <BrazilianVoicePortfolio audioFallback={copy.audioFallback} />;
   if (!voiceMaterial.samples.length)
     return (
       <div className="voice-empty">
