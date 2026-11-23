@@ -87,8 +87,8 @@ export const voiceCopy: Record<Locale, VoiceCopy> = {
     language: "Idioma do portfólio",
     skip: "Pular para o conteúdo",
     homeLink: "Site pessoal",
-    hero: "Uma voz para",
-    heroEmphasis: "contar histórias.",
+    hero: "Uma voz para contar",
+    heroEmphasis: "histórias.",
     intro:
       "Narração, personagens e a descoberta da própria voz. Sou Clopes, iniciante em interpretação de voz, fazendo aulas e começando a participar de testes.",
     listenHeading: "Espaço de escuta",

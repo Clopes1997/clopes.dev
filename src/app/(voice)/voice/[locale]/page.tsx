@@ -15,16 +15,18 @@ export default async function VoicePage({ params }: Props) {
   const copy = voiceCopy[locale];
   return (
     <>
-      <section className="voice-intro">
+      <section
+        className={
+          locale === "pt-BR" ? "voice-intro voice-intro-compact" : "voice-intro"
+        }
+      >
         <div>
           <span className="voice-label">{copy.role}</span>
           <h1>
-            {copy.hero}
-            <br />
-            <em>{copy.heroEmphasis}</em>
+            {copy.hero} <em>{copy.heroEmphasis}</em>
           </h1>
         </div>
-        <p>{copy.intro}</p>
+        {locale !== "pt-BR" && <p>{copy.intro}</p>}
       </section>
       <section className="voice-listening" id="listen">
         <div className="voice-section-heading">
@@ -42,25 +44,6 @@ export default async function VoicePage({ params }: Props) {
           <p>{copy.training}</p>
           <p>{copy.auditions}</p>
         </div>
-      </section>
-      <section className="voice-practical">
-        <h2>{copy.details}</h2>
-        <dl>
-          <div>
-            <dt>{copy.languages}</dt>
-            <dd>
-              {voiceMaterial.languages.length
-                ? voiceMaterial.languages
-                    .map((language) => language[locale])
-                    .join(" · ")
-                : copy.languagesEmpty}
-            </dd>
-          </div>
-          <div>
-            <dt>{copy.setup}</dt>
-            <dd>{voiceMaterial.setup?.[locale] || copy.setupEmpty}</dd>
-          </div>
-        </dl>
       </section>
       {voiceMaterial.credits.length > 0 && (
         <section className="voice-credits">
